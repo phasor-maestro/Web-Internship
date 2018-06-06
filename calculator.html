@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Calculator</title>
+
+
+<script>
+
+function append(value1) {
+	var y=document.getElementById("result").value;
+	document.getElementById("result").value=y+value1;
+}
+
+function answer() {
+	console.log("ans");
+	var y=document.getElementById("result").value;
+	document.getElementById("result").value=eval(y);
+}	
+
+window.onload = function() {
+	console.log("hello");
+	document.getElementById('hello').onclick = function fun() {
+		console.log("world");
+		document.getElementById("result").value="";
+	}
+}
+
+
+
+
+</script>
+</head>
+
+<style>
+.screen {
+	font-size: 40px;
+	color: black;
+	height: 100px;
+	width: 394px;
+	background-color:white;
+	border: none;
+	text-align: right;
+	padding: 10px;
+}
+
+.button1 {
+	font-size: 60px;
+	border: none;
+	background-color: orange;
+	border-radius: 55%;
+	height: 92px;
+	width: 92px;
+}
+
+.button2 {
+	font-size: 60px;
+	border: none;
+	height: 92px;
+	width: 194px;
+	background-color: orange ;
+}
+
+.button1:hover {
+	background-color: blue;
+	border: 1px solid black;
+}
+
+.button2:hover {
+	background-color: blue;
+	border: 1px solid black;
+}
+	
+</style>
+
+<body style="background-color:powderblue">
+	<center>
+		<table>
+		
+			<tr>
+				<th colspan="4">
+					<input type="text" name="Display" class="screen" id="result" disabled>
+					<br><br>
+				</th>
+			</tr>
+			</form>
+			
+			<tr>
+				<td colspan="1">
+					<input type="button" name="one" value="1" class="button1" OnClick="append('1')">
+				</td>
+
+				<td colspan="1">
+                                        <input type="button" name="two" value="2" class="button1" OnClick="append('2')">
+                                </td>
+
+				<td colspan="1">
+                                        <input type="button" name="three" value="3" class="button1" OnClick="append('3')">
+                                </td>
+
+				<td colspan="1">
+                                        <input type="button" name="add" value="+" class="button1" OnClick="append('+')">
+                                </td>
+			</tr>
+
+			<tr >
+                                <td colspan="1">
+                                        <input type="button" name="four" value="4" class="button1" OnClick="append('4')">
+                                </td>
+
+                                <td colspan="1">
+                                        <input type="button" name="five" value="5" class="button1" onclick="append('5')">
+                                </td>
+
+                                <td colspan="1">
+                                        <input type="button" name="six" value="6" class="button1" onclick="append('6')">
+                                </td>
+
+                                <td colspan="1">
+                                        <input type="button" name="subtract" value="-" class="button1" onclick="append('-')">
+                                </td>
+
+                        </tr>
+
+					
+			<tr>
+				<td colspan="1">
+
+                                        <input type="button" name="seven" value="7" class="button1" onclick="append('7')">
+                                </td>
+
+                                <td colspan="1">
+                                        <input type="button" name="eight" value="8" class="button1" onclick="append('8')">
+                                </td>
+
+                                <td colspan="1">
+                                        <input type="button" name="nine" value="9" class="button1" onclick="append('9')">
+                                </td>
+
+                                <td colspan="1">
+                                        <input type="button" name="multiply" value="*" class="button1" onclick="append('*')">
+                                </td>
+
+                        </tr>
+
+			<tr>
+                                <td colspan="1">
+
+                                        <input type="button" name="zero" value="0" class="button1" onclick="append('0')">
+                                </td>
+
+                                <td colspan="1">
+                                        <input type="button" name="equal" value="=" class="button1" onclick="answer()">
+                                </td>
+
+                                <td colspan="1">
+                                        <input type="button" name="decimal" value="." class="button1" onclick="append('.')">
+                                </td>
+
+                                <td colspan="1">
+                                        <input type="button" name="div" value="/" class="button1" onclick="append('/')">
+                                </td>
+
+                        </tr>
+
+			<tr>
+				<td colspan="2">
+					<input type="button" name="delete" value="DEL" class="button2" onclick="clear()">
+				</td>
+		
+				<td colspan="2">
+                            <input id = "hello" type="button" name="clear" value="C" class="button2" onclick="clear()"> 
+                                </td>  
+			</tr>
+		</table>
+	</center>
+</body>
+</html> 
+
